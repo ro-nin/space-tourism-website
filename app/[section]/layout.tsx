@@ -10,6 +10,6 @@ export default async function RootLayout({
 }) {
     const sections = await getSectionsNames();
     return (
-        <>{children}</>
+        <div className='h-full w-full'>{children}</div>
     );
 }

@@ -17,8 +17,6 @@ export default async function RootLayout({
             <body>
                 <Container sections={sections}>
                     <Header sections={sections}></Header>
-
-                    <h1>I am an h1 inside root layout</h1>
                     {children}
                 </Container>
             </body>
