@@ -5,3 +5,37 @@
 * {
   @apply text-white;
 }
+
+@layer base {
+  html {
+    @apply font-serif text-base;
+  }
+
+  h1 {
+    @apply font-sans text-9xl;
+  }
+  h2 {
+    @apply font-sans text-8xl;
+  }
+  h3 {
+    @apply font-sans text-6xl;
+  }
+  h4 {
+    @apply font-sans text-4xl;
+  }
+
+  h5 {
+    @apply font-serif text-3xl;
+  }
+
+  subh1 {
+    @apply font-sans text-3xl;
+  }
+  subh2 {
+    @apply font-serif text-lg;
+  }
+
+  nav span {
+    @apply font-serif text-base;
+  }
+}

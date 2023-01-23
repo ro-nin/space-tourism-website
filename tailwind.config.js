@@ -1,4 +1,9 @@
+const defaultTheme = require("tailwindcss/defaultTheme")
+
+
 /** @type {import('tailwindcss').Config} */
+
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -7,6 +12,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        serif: ['var(--font-barlow-condensed)', ...defaultTheme.fontFamily.serif],
+        sans: ['var(--font-bellefair)', ...defaultTheme.fontFamily.sans],
+      },
       backgroundImage: {
         'home-desktop': "url('/assets/home/background-home-desktop.jpg')",
         'home-mobile': "url('/assets/home/background-home-mobile.jpg')",
