@@ -11,6 +11,12 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    colors: {
+      'neutral-light': '#FFFFFF',
+      'dark': '#0B0D17',
+      'accent': '#D0D6F9',
+      'neutral-shade': '#979797'
+    },
     extend: {
       fontFamily: {
         serif: ['var(--font-barlow-condensed)', ...defaultTheme.fontFamily.serif],

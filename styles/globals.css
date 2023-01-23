@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  @apply text-white;
+  @apply text-neutral-light;
 }
 
 @layer base {
