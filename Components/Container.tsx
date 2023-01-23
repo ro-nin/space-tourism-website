@@ -24,7 +24,7 @@ const Container = ({ sections, children, }: Props) => {
         : splittedPNs![1] === 'crew' ? bgCrew
             : splittedPNs![1] === 'technology' ? bgTechnology
                 : splittedPNs![1] === 'destinations' ? bgdestinations : ''
-    return <div className={`${bgStyle} bg-cover h-screen w-screen pb-8 flex flex-col`}>{children}</div>
+    return <div className={`${bgStyle} bg-cover h-screen w-screen pb-8 flex flex-col transition-all`}>{children}</div>
 
 }
 
