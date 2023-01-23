@@ -4,7 +4,7 @@ type Props = {}
 
 const Page = (props: Props) => {
     return (
-        <div>SubSection</div>
+        <div className='border-lime-700 border'>SubSection</div>
     )
 }
 

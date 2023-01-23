@@ -12,7 +12,7 @@ export type Section = {
 };
 
 export const getSectionsNames = cache((): Section[] => [
-  { name: "HOME", slug: "/" },
+  { name: "HOME", slug: "" },
   { name: "DESTINATION", slug: "destinations" },
   { name: "CREW", slug: "CREW".toLocaleLowerCase() },
   { name: "TECHNOLOGY", slug: "TECHNOLOGY".toLocaleLowerCase() },

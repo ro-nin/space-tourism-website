@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import { getSectionsNames } from '../lib/SharedData';
 import Header from '../Components/Header';
+import Container from '../Components/Container';
 
 export default async function RootLayout({
     // Layouts must accept a children prop.
@@ -14,9 +15,12 @@ export default async function RootLayout({
         <html lang="en">
 
             <body>
-                <Header sections={sections}></Header>
-                <h1>I am an h1 inside root layout</h1>
-                {children}
+                <Container sections={sections}>
+                    <Header sections={sections}></Header>
+
+                    <h1>I am an h1 inside root layout</h1>
+                    {children}
+                </Container>
             </body>
         </html>
     );
