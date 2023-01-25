@@ -24,27 +24,27 @@ const DestinationInfoPanel = ({ categoriesWithData }: Props) => {
     return (
         <div className='flex flex-col  gap-4 lg:gap-12 items-center lg:items-start transition-all'>
             <Navlinks small={true} withNumber={false} links={navlinks} activeIndex={activeIndex}></Navlinks>
-            <h2 className='uppercase mx-auto'>{section?.name}</h2>
-            <p>{section!.description}</p>
-            <div className='h-[2px] w-full border border-neutral-shade border-opacity-70'></div>
-            <div className='grid grid-cols-2 w-[80%] justify-evenly '>
-                <div className='text-left'>
-                    <span className='subh2 block text-neutral-shade'>
-                        AVG. DISTANCE
-                    </span >
-                    <span className='subh1'>
-                        {section.distance}
-                    </span>
-                </div>
-                <div className='text-left'>
-                    <span className='subh2 block text-neutral-shade'>
-                        EST. TRAVEL TIME
-                    </span >
-                    <span className='subh1'>
-                        {section.travel}
-                    </span>
-                </div>
-            </div>
+            {section && <><h2 className='uppercase mx-auto'>{section?.name}</h2>
+                <p>{section.description}</p>
+                <div className='h-[2px] w-full border border-neutral-shade border-opacity-70'></div>
+                <div className='grid grid-cols-2 w-[80%] justify-evenly '>
+                    <div className='text-left'>
+                        <span className='subh2 block text-neutral-shade'>
+                            AVG. DISTANCE
+                        </span >
+                        <span className='subh1'>
+                            {section.distance}
+                        </span>
+                    </div>
+                    <div className='text-left'>
+                        <span className='subh2 block text-neutral-shade'>
+                            EST. TRAVEL TIME
+                        </span >
+                        <span className='subh1'>
+                            {section.travel}
+                        </span>
+                    </div>
+                </div></>}
         </div>
     )
 }
