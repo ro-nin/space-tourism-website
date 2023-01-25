@@ -5,10 +5,13 @@ import { CategoryMeta } from '../lib/SharedData'
 import { usePathname } from 'next/navigation';
 
 type Props = {
-    sections: CategoryMeta[]
+    links: {
+        displayName: string,
+        url: string
+    }[]
 }
 
-const Navbar = ({ sections }: Props) => {
+const Navbar = ({ links }: Props) => {
     const pathname = usePathname();
     const splittedPNs = pathname?.split('/')
     return (
@@ -22,12 +25,12 @@ const Navbar = ({ sections }: Props) => {
              2xl:w-[37rem] 2xl:-translate-x-[40rem] 
                z-50   bg-neutral-shade'></div>
 
-            {sections.map((sec, index) => (
-                <Link key={sec.slug} href={'/' + sec.slug}>
-                    <h6 className={`nav-underline  ${(pathname === '/' && sec.slug === '/')
+            {links.map((sec, index) => (
+                <Link key={sec.url} href={'/' + sec.url}>
+                    <h6 className={`nav-underline  ${(pathname === '/' && sec.url === '/')
                         ||
-                        (splittedPNs !== undefined && sec.slug === splittedPNs[1]) ?
-                        ' nav-underline-active ' : ''}`}><span>0{index}</span> {sec.name}</h6>
+                        (splittedPNs !== undefined && sec.url === splittedPNs[1]) ?
+                        ' nav-underline-active ' : ''}`}><span>0{index}</span> {sec.displayName}</h6>
                 </Link>
             ))}
         </nav>

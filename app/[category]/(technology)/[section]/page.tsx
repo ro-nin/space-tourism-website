@@ -9,6 +9,7 @@ const Page = async (props: Props) => {
     const categoriesData =  await GetCategoriesWithData();
     return (
         <div className=' pt-16'>
+            technology
             <div className=' flex h-full w-full  items-stretch justify-around'>
                 <div className=' relative'>
                     <DestinationInfoPanel categoriesWithData={categoriesData} />

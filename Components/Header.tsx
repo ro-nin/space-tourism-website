@@ -9,11 +9,13 @@ type Props = {
 
 const Header = ({ sections }: Props) => {
 
+    const urls = sections.map((sec) => { return { displayName: sec.name, url: sec.slug } })
+
 
     return (<header className='flex w-full  items-start md:items-center justify-between
      absolute md:relative lg:pt-8 pl-6 right-0 top-0 '>
         <Logo className='mt-8 md:mt-0'></Logo>
-        <Navbar sections={sections}></Navbar>
+        <Navbar links={urls}></Navbar>
     </header>
 
     )
