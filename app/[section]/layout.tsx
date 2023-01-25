@@ -1,6 +1,6 @@
 
 import '../../styles/globals.css'
-import { getSectionsNames } from '../../lib/SharedData';
+import { getCategoryMeta } from '../../lib/SharedData';
 import SectionHeader from '../../Components/SectionHeader';
 
 
@@ -10,7 +10,7 @@ export default async function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
-    const sections = await getSectionsNames();
+    const sections = getCategoryMeta();
     return (
         <div className='h-full w-full transition-all'>
             <div className='pl-28 pt-16'>

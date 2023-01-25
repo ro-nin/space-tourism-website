@@ -1,10 +1,10 @@
 import React from 'react'
-import { Section } from '../lib/SharedData';
+import { CategoryMeta } from '../lib/SharedData';
 import Link from 'next/link';
 import Navbar from './Navbar';
 import Logo from '../public/assets/shared/logo.svg'
 type Props = {
-    sections: Section[]
+    sections: CategoryMeta[]
 }
 
 const Header = ({ sections }: Props) => {

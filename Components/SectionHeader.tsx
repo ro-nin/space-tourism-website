@@ -2,15 +2,15 @@
 
 import { usePathname } from 'next/navigation';
 import React from 'react'
-import {  Section } from '../lib/SharedData';
-import { getSectionInfoFromSlug, parsePathname } from '../lib/utils';
+import {  CategoryMeta } from '../lib/SharedData';
+import { getSectionInfoFromSlug, getCategoryPath } from '../lib/utils';
 
 type Props = {
-    sections: Section[]
+    sections: CategoryMeta[]
 }
 
 const SectionHeader = (props: Props) => {
-    const pathname = parsePathname(usePathname());
+    const pathname = getCategoryPath(usePathname());
     const sectionInfo = getSectionInfoFromSlug(props.sections, pathname!);
 
     return (

@@ -2,10 +2,10 @@
 
 import { usePathname } from 'next/navigation';
 import React from 'react'
-import { Section } from '../lib/SharedData'
+import { CategoryMeta } from '../lib/SharedData'
 
 type Props = {
-    sections: Section[],
+    sections: CategoryMeta[],
     children: React.ReactNode;
 }
 

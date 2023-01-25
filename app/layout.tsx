@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { getSectionsNames } from '../lib/SharedData';
+import { getCategoryMeta } from '../lib/SharedData';
 import Header from '../Components/Header';
 import Container from '../Components/Container';
 import { Bellefair, Barlow_Condensed, } from '@next/font/google';
@@ -25,7 +25,7 @@ export default async function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
-    const sections = await getSectionsNames();
+    const sections = await getCategoryMeta();
     return (
         <html lang="en" className={`${barlowFont.variable} ${bellefairFont.variable}`}>
 

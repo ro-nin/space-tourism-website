@@ -6,13 +6,57 @@ export type PageProps = {
   params?: any;
   children?: React.ReactNode;
 };
-export type Section = {
+export type CategoryMeta = {
   name: string;
   slug: string;
   sectionIndex: string;
 };
 
-export const getSectionsNames = cache((): Section[] => [
+export interface ExternalData {
+  destinations: Destination[];
+  crew: Crew[];
+  technology: Technology[];
+}
+
+export interface SectionData {
+  name: string;
+  images:any
+}
+
+export interface Crew extends SectionData {
+  images: CrewOrDestinationImages;
+  role: string;
+  bio: string;
+}
+
+export interface CrewOrDestinationImages {
+  png: string;
+  webp: string;
+}
+
+export interface Destination extends SectionData {
+  images: CrewOrDestinationImages;
+  description: string;
+  distance: string;
+  travel: string;
+}
+
+export interface Technology extends SectionData {
+  images: TechnologyImages;
+  description: string;
+}
+
+export interface TechnologyImages {
+  portrait: string;
+  landscape: string;
+}
+
+export interface Category {
+  data: SectionData[];
+  meta?: CategoryMeta;
+}
+
+export const getCategoryMeta = cache((): CategoryMeta[] => [
   { name: "HOME", slug: "", sectionIndex: "00" },
   { name: "DESTINATION", slug: "destinations", sectionIndex: "01" },
   { name: "CREW", slug: "CREW".toLocaleLowerCase(), sectionIndex: "02" },
@@ -23,21 +67,26 @@ export const getSectionsNames = cache((): Section[] => [
   },
 ]);
 
-export async function GetSectionsData() {
+export async function GetCategoriesWithData(): Promise<Category[]> {
   // Assuming it always return expected categories
   const jsonDirectory = path.join(process.cwd(), "externalData");
   //Read the json data file data.json
   const fileContents = await fs.readFile(jsonDirectory + "/data.json", "utf8");
   //Return the content of the data file in json format
-  const parsed = JSON.parse(fileContents);
-  return parsed;
+  const parsed: ExternalData = await JSON.parse(fileContents);
+  const sections = [
+    {
+      data: parsed.crew,
+      meta: getCategoryMeta().find((meta) => meta.slug === "crew"),
+    },
+    {
+      data: parsed.destinations,
+      meta: getCategoryMeta().find((meta) => meta.slug === "destinations"),
+    },
+    {
+      data: parsed.technology,
+      meta: getCategoryMeta().find((meta) => meta.slug === "technology"),
+    },
+  ];
+  return sections;
 }
-
-export async function getSectionDataFromSlug(sectionSlug: string) {
-  //TODO make enum to better type the args
-  const sectionsData = await GetSectionsData();
-  //TODO?
-  return sectionsData;
-}
-
-

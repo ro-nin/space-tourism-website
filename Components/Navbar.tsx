@@ -1,11 +1,11 @@
 'use client';
 import Link from 'next/link'
 import React from 'react'
-import { Section } from '../lib/SharedData'
+import { CategoryMeta } from '../lib/SharedData'
 import { usePathname } from 'next/navigation';
 
 type Props = {
-    sections: Section[]
+    sections: CategoryMeta[]
 }
 
 const Navbar = ({ sections }: Props) => {
