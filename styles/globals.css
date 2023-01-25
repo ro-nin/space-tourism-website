@@ -35,7 +35,7 @@
     @apply font-serif text-lg;
   }
 
-  nav span {
+  nav > span {
     @apply font-serif text-base;
   }
 }

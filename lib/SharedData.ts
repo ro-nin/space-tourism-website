@@ -1,5 +1,5 @@
 import { cache } from "react";
-import path, { parse } from "path";
+import path from "path";
 import { promises as fs } from "fs";
 
 export type PageProps = {
@@ -9,13 +9,18 @@ export type PageProps = {
 export type Section = {
   name: string;
   slug: string;
+  sectionIndex: string;
 };
 
 export const getSectionsNames = cache((): Section[] => [
-  { name: "HOME", slug: "" },
-  { name: "DESTINATION", slug: "destinations" },
-  { name: "CREW", slug: "CREW".toLocaleLowerCase() },
-  { name: "TECHNOLOGY", slug: "TECHNOLOGY".toLocaleLowerCase() },
+  { name: "HOME", slug: "", sectionIndex: "00" },
+  { name: "DESTINATION", slug: "destinations", sectionIndex: "01" },
+  { name: "CREW", slug: "CREW".toLocaleLowerCase(), sectionIndex: "02" },
+  {
+    name: "TECHNOLOGY",
+    slug: "TECHNOLOGY".toLocaleLowerCase(),
+    sectionIndex: "03",
+  },
 ]);
 
 export async function GetSectionsData() {
@@ -28,9 +33,11 @@ export async function GetSectionsData() {
   return parsed;
 }
 
-export async function getSectionData(sectionSlug: string) {
+export async function getSectionDataFromSlug(sectionSlug: string) {
   //TODO make enum to better type the args
   const sectionsData = await GetSectionsData();
   //TODO?
-  return sectionsData.sectionSlug;
+  return sectionsData;
 }
+
+
