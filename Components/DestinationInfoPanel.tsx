@@ -13,7 +13,9 @@ const DestinationInfoPanel = ({ categoriesWithData }: Props) => {
     const clientPathName = usePathname()
     const section = getSectionDataFromPathname(clientPathName, categoriesWithData)
     return (
-        <div>{section?.name}</div>
+        <div className='flex flex-col'>
+            <h2>{section?.name.toLocaleUpperCase()}</h2>
+            </div>
     )
 }
 

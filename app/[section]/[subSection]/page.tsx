@@ -8,9 +8,9 @@ type Props = {}
 const Page = async (props: Props) => {
     const sectionsData =  await GetCategoriesWithData();
     return (
-        <div className='p-8 h-full'>
-            <div className=' flex items-center justify-around'>
-                <div>
+        <div className=' pt-16'>
+            <div className=' flex h-full w-full  items-stretch justify-around'>
+                <div className='w-80 aspect-square relative'>
                     <DestinationImagePanel categoriesWithData={sectionsData} />
                 </div>
                 <div>

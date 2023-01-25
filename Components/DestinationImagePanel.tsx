@@ -13,7 +13,7 @@ const DestinationImagePanel = ({ categoriesWithData }: Props) => {
     const clientPathName = usePathname()
     const section = getSectionDataFromPathname(clientPathName, categoriesWithData)
     return (
-        <Image src={section?.images?.webp.replace('./assets/', '/assets/')} width={100} height={100} alt={''} />
+        <Image src={section?.images?.webp.replace('./assets/', '/assets/')} fill alt={''} />
     )
 }
 
