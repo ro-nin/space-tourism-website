@@ -15,7 +15,7 @@ const DestinationInfoPanel = ({ categoriesWithData }: Props) => {
     return (
         <div className='flex flex-col'>
             <h2>{section?.name.toLocaleUpperCase()}</h2>
-            </div>
+        </div>
     )
 }
 

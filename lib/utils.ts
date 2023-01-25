@@ -29,13 +29,13 @@ export function getSectionDataFromPathname(
   categoriesWithData: Category[]
 ) {
   const path = getPath(clientPathName);
-  const categoryName = path[0];
-  const sectionName = path[1];
+  const categoryNameFromClient = path[0];
+  const sectionNameFromClient = path[1];
   const category = categoriesWithData.find(
-    (cat) => cat.meta?.slug === categoryName
+    (cat) => cat.meta?.slug === categoryNameFromClient
   );
   const section = category?.data?.find(
-    (sec) => sec.name.toLocaleLowerCase() === sectionName.toLocaleLowerCase()
+    (sec) => sec.name.toLocaleLowerCase().replace(' ','-') === sectionNameFromClient.toLocaleLowerCase().replace(' ','-')
   );
   return section;
 }

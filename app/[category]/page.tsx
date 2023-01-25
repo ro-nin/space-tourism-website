@@ -3,7 +3,9 @@ type Props = {}
 
 const Page = (props: Props) => {
     return (
-        <div className=' p-8 '></div>
+        <div className=' p-8 '>
+            {"No section :("}
+        </div>
     )
 }
 

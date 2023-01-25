@@ -1,7 +1,7 @@
 import React from 'react'
-import DestinationImagePanel from '../../../Components/DestinationImagePanel';
-import DestinationInfoPanel from '../../../Components/DestinationInfoPanel';
-import { GetCategoriesWithData } from '../../../lib/SharedData';
+import DestinationImagePanel from '../../../../Components/DestinationImagePanel';
+import DestinationInfoPanel from '../../../../Components/DestinationInfoPanel';
+import { GetCategoriesWithData } from '../../../../lib/SharedData';
 
 type Props = {}
 
