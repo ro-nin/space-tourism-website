@@ -3,7 +3,7 @@ type Props = {}
 
 const Page = (props: Props) => {
     return (
-        <div className=' border-cyan-700 border'>Section</div>
+        <div className=' p-8 '></div>
     )
 }
 

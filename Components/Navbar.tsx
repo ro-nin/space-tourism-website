@@ -23,10 +23,10 @@ const Navbar = ({ sections }: Props) => {
 
             {sections.map((sec, index) => (
                 <Link key={sec.slug} href={'/' + sec.slug}>
-                    <h6 className={`transition-all hover:underline decoration-neutral-shade sm:underline-offset-[36px] ${(pathname === '/' && sec.slug === '/')
+                    <h6 className={`nav-underline  ${(pathname === '/' && sec.slug === '/')
                         ||
                         (splittedPNs !== undefined && sec.slug === splittedPNs[1]) ?
-                        ' underline decoration-neutral-light sm:underline-offset-[36px]' : ''}`}><span>0{index}</span> {sec.name}</h6>
+                        ' nav-underline-active ' : ''}`}><span>0{index}</span> {sec.name}</h6>
                 </Link>
             ))}
         </nav>

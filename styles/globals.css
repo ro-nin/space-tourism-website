@@ -39,3 +39,15 @@
     @apply font-serif text-base;
   }
 }
+
+.nav-underline {
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  @apply underline  sm:underline-offset-[36px] transition-all duration-700;
+}
+.nav-underline-active {
+  text-decoration: underline 0.15em rgba(255, 255, 255, 1);
+}
+
+.nav-underline:hover:not(.nav-underline-active) {
+  text-decoration-color: rgb(120, 120, 120);
+}
