@@ -3,12 +3,12 @@ import Link from 'next/link'
 import React from 'react'
 import { CategoryMeta } from '../lib/SharedData'
 import { usePathname } from 'next/navigation';
+import { NavLinksType } from '../lib/utils';
+
+
 
 type Props = {
-    links: {
-        displayName: string,
-        url: string
-    }[]
+    links: NavLinksType[]
 }
 
 const Navbar = ({ links }: Props) => {

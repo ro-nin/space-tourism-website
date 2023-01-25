@@ -42,8 +42,13 @@
 
 .nav-underline {
   text-decoration: underline 0.15em rgba(0, 0, 0, 0);
-  @apply underline  sm:underline-offset-[36px] transition-all duration-700;
+  @apply underline  sm:underline-offset-[36px] transition-all duration-500;
 }
+
+.nav-underline.nav-underline-small {
+  @apply sm:underline-offset-8;
+}
+
 .nav-underline-active {
   text-decoration: underline 0.15em rgba(255, 255, 255, 1);
 }

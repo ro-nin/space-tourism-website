@@ -7,6 +7,11 @@ export function getCategoryPath(pathname: string | null) {
   return splittedPNs[1];
 }
 
+export type NavLinksType = {
+  displayName: string;
+  url: string;
+};
+
 /*
  **
  */
