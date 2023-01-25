@@ -27,10 +27,10 @@ const Navbar = ({ links }: Props) => {
 
             {links.map((sec, index) => (
                 <Link key={sec.url} href={'/' + sec.url}>
-                    <h6 className={`nav-underline  ${(pathname === '/' && sec.url === '/')
+                    <span className={`nav-underline  ${(pathname === '/' && sec.url === '/')
                         ||
                         (splittedPNs !== undefined && sec.url === splittedPNs[1]) ?
-                        ' nav-underline-active ' : ''}`}><span>0{index}</span> {sec.displayName}</h6>
+                        ' nav-underline-active ' : ''}`}><span>0{index}</span> {sec.displayName}</span>
                 </Link>
             ))}
         </nav>

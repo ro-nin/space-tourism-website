@@ -15,10 +15,11 @@ const Navlinks = ({ links, activeIndex, withNumber = true, small = false }: Prop
         <div className='flex gap-8'>
             {links.map((sec, index) => (
                 <Link key={sec.url} href={'/' + sec.url}>
-                    <h6 className={`nav-underline uppercase ${small && "nav-underline-small"}  ${index === activeIndex ?
+                    <span className={`nav-underline uppercase ${small && "nav-underline-small"}  ${index === activeIndex ?
                         ' nav-underline-active ' : ''}`}>
                         {withNumber && <span>0{index}</span>}
-                        {sec.displayName}</h6>
+                        {sec.displayName}
+                        </span>
                 </Link>
             ))}
         </div>

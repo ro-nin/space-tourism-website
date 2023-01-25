@@ -28,10 +28,10 @@
     @apply font-serif text-3xl;
   }
 
-  subh1 {
+  .subh1 {
     @apply font-sans text-3xl;
   }
-  subh2 {
+  .subh2 {
     @apply font-serif text-lg;
   }
 

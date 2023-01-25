@@ -20,7 +20,7 @@ export interface ExternalData {
 
 export interface SectionData {
   name: string;
-  images:any
+  images: any;
 }
 
 export interface Crew extends SectionData {
@@ -52,7 +52,7 @@ export interface TechnologyImages {
 }
 
 export interface Category {
-  data: SectionData[];
+  data: Array<Destination | Technology | Crew>;
   meta?: CategoryMeta;
 }
 
