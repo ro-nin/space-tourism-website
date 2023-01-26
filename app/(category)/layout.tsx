@@ -12,12 +12,10 @@ export default async function RootLayout({
 }) {
     const sections = getCategoryMeta();
     return (
-        <div className='h-full w-full transition-all'>
-            <div className='px-8 lg:pl-28 pt-16 h-full w-full transition-all'>
-                <SectionHeader sections={sections} />
-                {children}
-            </div>
-
+        <div className='h-[80%] lg:pl-28 pt-12 flex flex-col flex-grow  w-full transition-all'>
+            <SectionHeader sections={sections} />
+            {children}
         </div>
+
     );
 }

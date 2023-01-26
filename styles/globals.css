@@ -7,6 +7,12 @@
 }
 
 @layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   html {
     @apply font-serif text-base;
   }
@@ -55,4 +61,15 @@
 
 .nav-underline:hover:not(.nav-underline-active) {
   text-decoration-color: rgb(120, 120, 120);
+}
+
+.nav-point {
+  @apply rounded-full w-3 h-3  bg-neutral-shade block;
+}
+
+.nav-point:hover {
+  @apply bg-neutral-light bg-opacity-75
+}
+.nav-point.nav-point-active {
+  @apply bg-neutral-light  ;
 }
