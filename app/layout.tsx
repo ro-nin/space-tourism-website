@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import { getCategoryMeta } from "../lib/SharedData";
-import Header from "../Components/Header";
+import Header from "../Components/Header/Header";
 import Container from "../Components/Container";
 import { Bellefair, Barlow_Condensed } from "@next/font/google";
 

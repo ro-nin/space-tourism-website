@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { NavLinksProps } from "./Navlinks";
+import { NavLinksProps } from "./NavlinksTitles";
 
 const NavLinksPoints = ({ links, activeIndex }: NavLinksProps) => {
   return (

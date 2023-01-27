@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { NavLinksType } from "../lib/utils";
+import { NavLinksType } from "../../lib/utils";
 
 export type NavLinksProps = {
   links: NavLinksType[];
@@ -9,7 +9,7 @@ export type NavLinksProps = {
   small?: boolean;
 };
 
-const Navlinks = ({
+const NavlinksTitles = ({
   links,
   activeIndex,
   withNumber = true,
@@ -34,4 +34,4 @@ const Navlinks = ({
   );
 };
 
-export default Navlinks;
+export default NavlinksTitles;

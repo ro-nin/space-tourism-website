@@ -3,9 +3,7 @@
 import { usePathname } from "next/navigation";
 import React from "react";
 import {
-  ExternalData,
   Category,
-  CategoryMeta,
   Destination,
 } from "../lib/SharedData";
 import {
@@ -14,7 +12,7 @@ import {
   getSectionDataFromPathname,
   NavLinksType,
 } from "../lib/utils";
-import Navlinks from "./Navlinks";
+import NavlinksTitles from "./Navigation/NavlinksTitles";
 
 type Props = {
   categoriesWithData: Category[];
@@ -42,12 +40,12 @@ const DestinationInfoPanel = ({ categoriesWithData }: Props) => {
   );
   return (
     <div className="flex flex-col  items-center  gap-6 transition-all lg:items-start">
-      <Navlinks
+      <NavlinksTitles
         small={true}
         withNumber={false}
         links={navlinks}
         activeIndex={activeIndex}
-      ></Navlinks>
+      ></NavlinksTitles>
       {section && (
         <>
           <h2 className="uppercase ">{section?.name}</h2>

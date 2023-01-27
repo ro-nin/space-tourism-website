@@ -1,25 +1,25 @@
 "use client";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { Category, Crew, Destination } from "../lib/SharedData";
+import { Category, Technology } from "../lib/SharedData";
 import {
   getCategoryPath,
   getSectionDataFromPathname,
   NavLinksType,
 } from "../lib/utils";
-import NavLinksPoints from "./Navigation/NavLinksPoints";
+import NavLinksNumbers from "./Navigation/NavLinksNumbers";
 
 type Props = {
   categoriesWithData: Category[];
 };
 
-const CrewInfoPanel = ({ categoriesWithData }: Props) => {
+const TechnologyInfoPanel = ({ categoriesWithData }: Props) => {
   const clientPathName = usePathname();
   const currentCategory = getCategoryPath(clientPathName);
   const section = getSectionDataFromPathname(
     clientPathName,
     categoriesWithData
-  ) as Crew;
+  ) as Technology;
   const navlinks: NavLinksType[] = categoriesWithData
     .find((cat) => cat.meta?.slug === currentCategory)!
     .data.map((sec) => {
@@ -35,19 +35,21 @@ const CrewInfoPanel = ({ categoriesWithData }: Props) => {
   );
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-4 text-center  lg:items-start lg:text-left  ">
-      <h4 className="mt-auto uppercase text-neutral-shade ">
-        {section && section.role}
-      </h4>
-      <h3 className="uppercase xl:whitespace-nowrap">
-        {section && section.name}
-      </h3>
-      <p className=" ">{section && section.bio}</p>
+    <div className="flex h-full w-full flex-col items-center justify-center gap-8 text-center lg:flex-row lg:gap-12   lg:text-left  ">
       <div className="lg:my-auto">
-        <NavLinksPoints links={navlinks} activeIndex={activeIndex} />
+        <NavLinksNumbers links={navlinks} activeIndex={activeIndex} />
+      </div>
+      <div className="flex flex-col gap-4">
+        <h4 className="mt-auto uppercase text-neutral-shade ">
+          {"The Terminology..."}
+        </h4>
+        <h3 className="uppercase xl:whitespace-nowrap">
+          {section && section.name}
+        </h3>
+        <p className=" ">{section && section.description}</p>
       </div>
     </div>
   );
 };
 
-export default CrewInfoPanel;
+export default TechnologyInfoPanel;

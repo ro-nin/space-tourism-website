@@ -73,3 +73,22 @@
 .nav-point.nav-point-active {
   @apply bg-neutral-light;
 }
+
+.nav-circle {
+  @apply z-20 h-16 w-16 rounded-full border border-neutral-shade bg-neutral-light bg-opacity-0 text-neutral-light transition-all duration-500;
+}
+
+.nav-circle.nav-circle-active {
+  @apply mx-auto my-auto  bg-opacity-100 text-center text-neutral-shade;
+}
+
+.nav-circle:hover:not(.nav-circle-active) {
+  @apply border-neutral-light;
+}
+
+.nav-circle span {
+  @apply z-30;
+}
+.nav-circle.nav-circle-active span {
+  @apply text-neutral-shade;
+}

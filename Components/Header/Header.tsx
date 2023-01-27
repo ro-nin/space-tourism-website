@@ -1,8 +1,7 @@
 import React from "react";
-import { CategoryMeta } from "../lib/SharedData";
-import Link from "next/link";
-import Navbar from "./Navbar";
-import Logo from "../public/assets/shared/logo.svg";
+import { CategoryMeta } from "../../lib/SharedData";
+import Navbar from "../Navigation/Navbar";
+import Logo from "../../public/assets/shared/logo.svg";
 type Props = {
   sections: CategoryMeta[];
 };
