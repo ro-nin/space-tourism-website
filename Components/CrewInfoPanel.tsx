@@ -22,11 +22,11 @@ const CrewInfoPanel = ({ categoriesWithData }: Props) => {
     const activeIndex = navlinks.findIndex((sec) => sec.displayName.toLowerCase() === section?.name.toLowerCase())
 
     return (
-        <div className='h-full w-full flex flex-col gap-4 justify-center items-start   text-left  '>
+        <div className='h-full w-full flex flex-col gap-4 justify-center items-center lg:items-start  text-center lg:text-left  '>
             <h4 className='mt-auto uppercase text-neutral-shade '>{section && section.role}</h4>
             <h3 className='uppercase whitespace-nowrap'>{section && section.name}</h3>
             <p className=' '>{section && section.bio}</p>
-            <div className='my-auto'>
+            <div className='lg:my-auto'>
                 <NavLinksPoints links={navlinks} activeIndex={activeIndex} />
             </div>
         </div>
