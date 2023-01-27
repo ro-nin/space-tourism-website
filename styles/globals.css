@@ -48,7 +48,7 @@
 
 .nav-underline {
   text-decoration: underline 0.15em rgba(0, 0, 0, 0);
-  @apply underline  sm:underline-offset-[36px] transition-all duration-500;
+  @apply underline  transition-all duration-500 sm:underline-offset-[36px];
 }
 
 .nav-underline.nav-underline-small {
@@ -64,12 +64,12 @@
 }
 
 .nav-point {
-  @apply rounded-full w-3 h-3  bg-neutral-shade block;
+  @apply block h-3 w-3  rounded-full bg-neutral-shade;
 }
 
 .nav-point:hover {
-  @apply bg-neutral-light bg-opacity-75
+  @apply bg-neutral-light bg-opacity-75;
 }
 .nav-point.nav-point-active {
-  @apply bg-neutral-light  ;
+  @apply bg-neutral-light;
 }

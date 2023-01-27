@@ -1,31 +1,27 @@
-import React from 'react'
-import CrewImagePanel from '../../../../Components/CrewImagePanel';
-import CrewInfoPanel from '../../../../Components/CrewInfoPanel';
-import DestinationInfoPanel from '../../../../Components/DestinationInfoPanel';
-import { GetCategoriesWithData } from '../../../../lib/SharedData';
+import React from "react";
+import CrewImagePanel from "../../../../Components/CrewImagePanel";
+import CrewInfoPanel from "../../../../Components/CrewInfoPanel";
+import DestinationInfoPanel from "../../../../Components/DestinationInfoPanel";
+import { GetCategoriesWithData } from "../../../../lib/SharedData";
 
-
-
-type Props = {}
+type Props = {};
 
 const Page = async (props: Props) => {
-    const categoriesData = await GetCategoriesWithData();
-    return (
+  const categoriesData = await GetCategoriesWithData();
+  return (
+    <div
+      className="relative flex h-full 
+        w-full  flex-1 flex-col items-center  justify-end gap-4  pt-12 md:pt-6
+         lg:flex-row lg:items-end lg:justify-around lg:gap-0 "
+    >
+      <div className="order-last w-[80%]   md:order-first lg:h-full lg:w-[45%] ">
+        <CrewInfoPanel categoriesWithData={categoriesData} />
+      </div>
+      <div className=" relative aspect-auto h-[55%] w-full md:h-full lg:w-[55%] ">
+        <CrewImagePanel categoriesWithData={categoriesData} />
+      </div>
+    </div>
+  );
+};
 
-
-        <div className='relative h-full w-full 
-        flex-1  flex flex-col lg:flex-row  gap-4 lg:gap-0  pt-12 md:pt-6
-         items-center lg:items-end justify-end lg:justify-around '>
-            <div className='md:order-first order-last   lg:h-full w-[80%] lg:w-[45%] '>
-                <CrewInfoPanel categoriesWithData={categoriesData} />
-            </div>
-            <div className=' relative aspect-auto h-[55%] md:h-full w-full lg:w-[55%] '>
-                <CrewImagePanel categoriesWithData={categoriesData} />
-            </div>
-
-        </div>
-
-    )
-}
-
-export default Page
+export default Page;

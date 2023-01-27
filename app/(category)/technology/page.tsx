@@ -1,13 +1,11 @@
-import { redirect } from 'next/navigation';
-import React from 'react'
+import { redirect } from "next/navigation";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const page = (props: Props) => {
-    redirect('/technology/Launch-vehicle');
-    return (
-        <div>page</div>
-    )
-}
+  redirect("/technology/Launch-vehicle");
+  return <div>page</div>;
+};
 
-export default page
+export default page;

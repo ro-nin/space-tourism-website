@@ -4,9 +4,9 @@ module.exports = {
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
-      use: ['@svgr/webpack'],
-    })
-    return config
+      use: ["@svgr/webpack"],
+    });
+    return config;
   },
   reactStrictMode: true,
   experimental: {
@@ -15,4 +15,4 @@ module.exports = {
   // fontLoaders: [
   //   { loader: '@next/font/google', options: { subsets: ['latin'] } },
   // ],
-}
+};

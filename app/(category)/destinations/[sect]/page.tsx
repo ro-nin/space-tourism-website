@@ -1,26 +1,26 @@
-import React from 'react'
-import DestinationImagePanel from '../../../../Components/DestinationImagePanel';
-import DestinationInfoPanel from '../../../../Components/DestinationInfoPanel';
-import { GetCategoriesWithData } from '../../../../lib/SharedData';
+import React from "react";
+import DestinationImagePanel from "../../../../Components/DestinationImagePanel";
+import DestinationInfoPanel from "../../../../Components/DestinationInfoPanel";
+import { GetCategoriesWithData } from "../../../../lib/SharedData";
 
-type Props = {}
+type Props = {};
 
 const Page = async (props: Props) => {
-    const sectionsData = await GetCategoriesWithData();
-    return (
+  const sectionsData = await GetCategoriesWithData();
+  return (
+    <div
+      className=" mx-auto my-auto flex h-full w-[80%] flex-col items-center justify-center
+         gap-6 transition-all lg:h-[80%]  lg:w-full lg:flex-row lg:items-stretch 
+        lg:justify-evenly lg:gap-0"
+    >
+      <div className="relative h-[40%] w-[80%]  lg:h-full lg:w-[35%]">
+        <DestinationImagePanel categoriesWithData={sectionsData} />
+      </div>
+      <div className="w-full lg:w-[35%]">
+        <DestinationInfoPanel categoriesWithData={sectionsData} />
+      </div>
+    </div>
+  );
+};
 
-        <div className=' flex flex-col lg:flex-row h-full lg:h-[80%] w-[80%] mx-auto my-auto
-         lg:w-full gap-6 lg:gap-0  lg:items-stretch justify-center items-center 
-        lg:justify-evenly transition-all'>
-            <div className='w-[80%] h-[40%] lg:h-full  lg:w-[35%] relative'>
-                <DestinationImagePanel categoriesWithData={sectionsData} />
-            </div>
-            <div className='w-full lg:w-[35%]'>
-                <DestinationInfoPanel categoriesWithData={sectionsData} />
-            </div>
-        </div>
-
-    )
-}
-
-export default Page
+export default Page;

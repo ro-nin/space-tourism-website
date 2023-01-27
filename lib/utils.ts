@@ -40,7 +40,9 @@ export function getSectionDataFromPathname(
     (cat) => cat.meta?.slug === categoryNameFromClient
   );
   const section = category?.data?.find(
-    (sec) => sec.name.toLocaleLowerCase().replace(' ','-') === sectionNameFromClient.toLocaleLowerCase().replace(' ','-')
+    (sec) =>
+      sec.name.toLocaleLowerCase().replace(" ", "-") ===
+      sectionNameFromClient.toLocaleLowerCase().replace(" ", "-")
   );
   return section;
 }
