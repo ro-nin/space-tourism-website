@@ -2,13 +2,8 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
-import {
-  ExternalData,
-  Category,
-  CategoryMeta,
-  Destination,
-} from "../lib/SharedData";
-import { getCategoryPath, getSectionDataFromPathname } from "../lib/utils";
+import { Category, Destination } from "../lib/SharedData";
+import { getSectionDataFromPathname } from "../lib/utils";
 
 type Props = {
   categoriesWithData: Category[];
@@ -22,7 +17,7 @@ const DestinationImagePanel = ({ categoriesWithData }: Props) => {
   ) as Destination;
   return (
     <Image
-      className="z-10 aspect-square object-contain"
+      className="z-10 object-contain"
       src={section?.images?.webp.replace("./assets/", "/assets/")}
       fill
       alt={""}

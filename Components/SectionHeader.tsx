@@ -14,7 +14,7 @@ const SectionHeader = (props: Props) => {
   const sectionInfo = getSectionInfoFromSlug(props.sections, pathname!);
 
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 md:pl-12   lg:pl-28">
       <h5 className="text-neutral-shade">
         {sectionInfo && sectionInfo?.sectionIndex}
       </h5>
