@@ -13,11 +13,13 @@ const Page = async (props: Props) => {
     return (
 
 
-        <div className=' flex-1  flex relative  grow gap-16 lg:gap-0  w-full flex-col lg:flex-row items-center lg:items-end justify-end lg:justify-around'>
-            <div className='   lg:h-full w-[80%] lg:w-[45%] '>
+        <div className='relative h-full w-full 
+        flex-1  flex flex-col lg:flex-row  gap-4 lg:gap-0  pt-12 md:pt-6
+         items-center lg:items-end justify-end lg:justify-around '>
+            <div className='md:order-first order-last   lg:h-full w-[80%] lg:w-[45%] '>
                 <CrewInfoPanel categoriesWithData={categoriesData} />
             </div>
-            <div className=' relative aspect-auto h-[65%] lg:h-full w-full lg:w-[55%] '>
+            <div className=' relative aspect-auto h-[55%] md:h-full w-full lg:w-[55%] '>
                 <CrewImagePanel categoriesWithData={categoriesData} />
             </div>
 

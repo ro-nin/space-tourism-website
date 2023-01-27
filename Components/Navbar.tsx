@@ -17,7 +17,7 @@ const Navbar = ({ links }: Props) => {
     return (
         <nav className='
             grow-0 flex ml-auto h-screen md:h-auto  md:flex-row flex-col items-center
-            gap-10 px-28 py-8
+            gap-10 pl-28 pr-36 py-8
             bg-neutral-light bg-opacity-10 backdrop-blur-lg relative '>
             <div className='hidden lg:inline absolute h-[1px]
              lg:w-[26rem] lg:-translate-x-[30rem] 
