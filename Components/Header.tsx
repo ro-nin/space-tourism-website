@@ -14,10 +14,10 @@ const Header = ({ sections }: Props) => {
 
   return (
     <header
-      className="absolute right-0 top-0  z-50 flex h-[15%] w-full
+      className="  z-50 flex h-[15%] w-full
      items-start justify-between pl-6 md:relative md:items-center lg:pt-8 "
     >
-      <Logo className="mt-8 md:mt-0"></Logo>
+      <Logo className="pt-8 md:pt-0"></Logo>
       <Navbar links={urls}></Navbar>
     </header>
   );

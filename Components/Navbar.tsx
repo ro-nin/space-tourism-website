@@ -14,8 +14,8 @@ const Navbar = ({ links }: Props) => {
   const splittedPNs = pathname?.split("/");
   return (
     <nav
-      className="
-            relative ml-auto flex h-screen grow-0  flex-col items-center gap-10
+      className=" relative
+            z-50 ml-auto flex h-screen grow-0  flex-col items-center gap-10
             bg-neutral-light bg-opacity-10 py-8 pl-28
             pr-36 backdrop-blur-lg md:h-auto md:flex-row "
     >
