@@ -30,7 +30,7 @@ const Container = ({ sections, children }: Props) => {
       ? bgdestinations
       : "";
   return (
-    <div className={`${bgStyle} h-screen w-screen bg-cover  transition-all`}>
+    <div className={`${bgStyle} h-screen w-screen bg-cover flex flex-col  transition-all`}>
       {children}
     </div>
   );

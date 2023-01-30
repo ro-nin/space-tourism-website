@@ -1,7 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { CategoryMeta } from "../../lib/SharedData";
 import Navbar from "../Navigation/Navbar";
 import Logo from "../../public/assets/shared/logo.svg";
+import Hamburger from "../../public/assets/shared/icon-hamburger.svg";
+import IconClose from "../../public/assets/shared/icon-close.svg";
 type Props = {
   sections: CategoryMeta[];
 };
@@ -11,13 +14,31 @@ const Header = ({ sections }: Props) => {
     return { displayName: sec.name, url: sec.slug };
   });
 
+  const [sideMenuIsOpen, setSideMenuIsOpen] = useState<boolean>(true);
+
   return (
     <header
-      className="  z-50 flex h-[15%] w-full
-     items-start justify-between pl-6 md:relative md:items-center lg:pt-8 "
+      className="  z-50 flex  w-full justify-between
+      pl-4  md:relative md:h-28 lg:items-start  "
     >
-      <Logo className="pt-8 md:pt-0"></Logo>
-      <Navbar links={urls}></Navbar>
+      <Logo className="h-20 w-20 pt-8  md:pl-4 "></Logo>
+      <Navbar
+        links={urls}
+        sideMenuIsOpen={sideMenuIsOpen}
+        setSideMenuIsOpen={setSideMenuIsOpen}
+      ></Navbar>
+      <button
+        onClick={() => {
+          setSideMenuIsOpen(!sideMenuIsOpen);
+        }}
+        className="z-50 ml-auto  h-24 w-24 pt-8 md:hidden md:pt-0"
+      >
+        {sideMenuIsOpen ? (
+          <IconClose className="  "></IconClose>
+        ) : (
+          <Hamburger className=" "></Hamburger>
+        )}
+      </button>
     </header>
   );
 };

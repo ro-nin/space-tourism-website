@@ -42,13 +42,13 @@
   }
 
   nav > span {
-    @apply font-serif text-base;
+    @apply text-left font-serif text-base;
   }
 }
 
 .nav-underline {
-  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
-  @apply underline  transition-all duration-500 sm:underline-offset-[36px];
+  text-decoration: underline 0.3em rgba(0, 0, 0, 0);
+  @apply text-left underline transition-all duration-500 sm:underline-offset-[3.2rem];
 }
 
 .nav-underline.nav-underline-small {
