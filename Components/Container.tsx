@@ -14,10 +14,12 @@ const Container = ({ sections, children }: Props) => {
   const splittedPNs = pathname?.split("/");
 
   //TODO move to sections
-  const bgHome = "bg-home-desktop";
-  const bgCrew = "bg-crew-desktop";
-  const bgTechnology = "bg-technology-desktop";
-  const bgdestinations = "bg-destination-desktop";
+  const bgHome = "lg:bg-home-desktop md:bg-home-tablet bg-home-mobile";
+  const bgCrew = "lg:bg-crew-desktop md:bg-crew-tablet bg-crew-mobile";
+  const bgTechnology =
+    "lg:bg-technology-desktop md:bg-technology-tablet bg-technology-mobile";
+  const bgdestinations =
+    "lg:bg-destination-desktop md:bg-destination-tablet bg-destination-mobile";
 
   const bgStyle =
     pathname === "/"
@@ -30,7 +32,9 @@ const Container = ({ sections, children }: Props) => {
       ? bgdestinations
       : "";
   return (
-    <div className={`${bgStyle} h-screen w-screen bg-cover flex flex-col  transition-all`}>
+    <div
+      className={`${bgStyle} flex h-screen w-screen flex-col bg-cover  transition-all`}
+    >
       {children}
     </div>
   );
