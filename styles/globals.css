@@ -47,16 +47,16 @@
 }
 
 .nav-underline {
-  text-decoration: underline 0.3em rgba(0, 0, 0, 0);
-  @apply text-left underline transition-all duration-500 sm:underline-offset-[3.2rem];
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  @apply text-left underline transition-all duration-500 sm:underline-offset-[3.0em];
 }
 
 .nav-underline.nav-underline-small {
-  @apply sm:underline-offset-8;
+  @apply sm:underline-offset-4;
 }
 
 .nav-underline-active {
-  text-decoration: underline 0.15em rgba(255, 255, 255, 1);
+  text-decoration-color: rgba(255, 255, 255, 1);
 }
 
 .nav-underline:hover:not(.nav-underline-active) {

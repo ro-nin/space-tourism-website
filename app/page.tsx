@@ -6,10 +6,11 @@ type Props = {};
 const Page = (props: Props) => {
   return (
     <div
-      className=" flex h-[85%] w-full flex-col items-center justify-evenly   pb-24 text-center  
+      className=" flex w-full flex-1 flex-col items-center justify-evenly   text-center 
+      lg:pb-24  
        lg:flex-row lg:items-end lg:justify-between lg:gap-0 lg:px-36 lg:text-left"
     >
-      <div className=" mx-auto flex flex-col gap-2 pb-12 lg:w-full ">
+      <div className=" mx-auto flex flex-col gap-2 lg:w-full lg:pb-12 ">
         <h5 className="text-accent">SO, YOU WANT TO TRAVEL TO</h5>
         <h1>SPACE</h1>
         <p className="mx-auto w-1/2 text-accent lg:mx-0 lg:w-[65%] ">
