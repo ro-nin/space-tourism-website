@@ -11,13 +11,14 @@ const Page = async (props: Props) => {
   return (
     <div
       className="relative flex h-full 
-        w-full  flex-1 flex-col items-center  justify-end gap-4  pt-12 md:pt-6
-         lg:flex-row lg:items-end lg:justify-around lg:gap-0 "
+        w-full  flex-1 flex-col items-center  justify-center gap-8  pt-8 
+        md:pt-6
+         lg:flex-row lg:items-end lg:justify-start lg:gap-0 lg:pl-28"
     >
-      <div className="order-last w-[80%]   md:order-first lg:h-full lg:w-[45%] ">
+      <div className="order-last w-[80%]   md:order-first lg:h-full lg:w-[40%] ">
         <CrewInfoPanel categoriesWithData={categoriesData} />
       </div>
-      <div className=" relative aspect-auto h-[55%] w-full md:h-full lg:w-[55%] ">
+      <div className=" relative h-[55%] w-full flex-1 md:h-full lg:w-auto ">
         <CrewImagePanel categoriesWithData={categoriesData} />
       </div>
     </div>

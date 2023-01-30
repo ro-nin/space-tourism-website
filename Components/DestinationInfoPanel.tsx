@@ -39,7 +39,7 @@ const DestinationInfoPanel = ({ categoriesWithData }: Props) => {
     (sec) => sec.displayName.toLowerCase() === section?.name.toLowerCase()
   );
   return (
-    <div className="flex flex-col  items-center  gap-6 transition-all lg:items-start">
+    <div className="flex flex-col  items-center flex-1 lg:pb-16 gap-6 transition-all lg:items-start">
       <NavlinksTitles
         small={true}
         withNumber={false}

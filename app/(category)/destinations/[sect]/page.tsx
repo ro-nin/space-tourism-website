@@ -16,7 +16,7 @@ const Page = async (props: Props) => {
       <div className="relative h-[40%] w-[80%]  lg:h-full lg:w-[30%]">
         <DestinationImagePanel categoriesWithData={sectionsData} />
       </div>
-      <div className="w-full lg:w-[30%]">
+      <div className="w-full lg:w-[30%] items-center flex ">
         <DestinationInfoPanel categoriesWithData={sectionsData} />
       </div>
     </div>
