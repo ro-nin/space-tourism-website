@@ -9,9 +9,9 @@ export default async function RootLayout({
 }) {
   const sections = getCategoryMeta();
   return (
-    <div className="flex w-full flex-1 flex-col pt-12 transition-all ">
+    <div className="flex w-full flex-1 flex-col pt-8 transition-all ">
       <SectionHeader sections={sections} />
-      <div className="  ">{children}</div>
+      {children}
     </div>
   );
 }
