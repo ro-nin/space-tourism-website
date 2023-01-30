@@ -40,9 +40,9 @@ const TechnologyInfoPanel = ({ categoriesWithData }: Props) => {
         <NavLinksNumbers links={navlinks} activeIndex={activeIndex} />
       </div>
       <div className="flex flex-col gap-4">
-        <h4 className="mt-auto uppercase text-neutral-shade ">
+        <span className="nav mt-auto uppercase text-neutral-shade ">
           {"The Terminology..."}
-        </h4>
+        </span>
         <h3 className="uppercase xl:whitespace-nowrap">
           {section && section.name}
         </h3>

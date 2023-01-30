@@ -14,7 +14,7 @@ const Header = ({ sections }: Props) => {
     return { displayName: sec.name, url: sec.slug };
   });
 
-  const [sideMenuIsOpen, setSideMenuIsOpen] = useState<boolean>(true);
+  const [sideMenuIsOpen, setSideMenuIsOpen] = useState<boolean>(false);
 
   return (
     <header

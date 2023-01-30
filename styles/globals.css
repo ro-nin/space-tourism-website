@@ -41,6 +41,11 @@
     @apply font-serif text-lg;
   }
 
+  .nav {
+    @apply font-serif;
+    text-size: 16px;
+  }
+
   nav > span {
     @apply text-left font-serif text-base;
   }
