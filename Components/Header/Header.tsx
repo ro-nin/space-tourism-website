@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { CategoryMeta } from "../../lib/SharedData";
-import Navbar from "../Navigation/Navbar";
+import Navbar from "./Navbar";
 import Logo from "../../public/assets/shared/logo.svg";
 import Hamburger from "../../public/assets/shared/icon-hamburger.svg";
 import IconClose from "../../public/assets/shared/icon-close.svg";

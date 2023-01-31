@@ -5,14 +5,14 @@ import React from "react";
 import {
   Category,
   Destination,
-} from "../lib/SharedData";
+} from "../../../../lib/SharedData";
 import {
   getCategoryPath,
   getPath,
   getSectionDataFromPathname,
   NavLinksType,
-} from "../lib/utils";
-import NavlinksTitles from "./Navigation/NavlinksTitles";
+} from "../../../../lib/utils";
+import NavlinksTitles from "../../../../Components/Navigation/NavlinksTitles";
 
 type Props = {
   categoriesWithData: Category[];

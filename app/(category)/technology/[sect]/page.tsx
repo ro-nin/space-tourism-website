@@ -1,7 +1,7 @@
 import React from "react";
 
-import TechnologyImagePanel from "../../../../Components/TechnologyImagePanel";
-import TechnologyInfoPanel from "../../../../Components/TechnologyInfoPanel";
+import TechnologyImagePanel from "./TechnologyImagePanel";
+import TechnologyInfoPanel from "./TechnologyInfoPanel";
 import { GetCategoriesWithData } from "../../../../lib/SharedData";
 
 type Props = {};

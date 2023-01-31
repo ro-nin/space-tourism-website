@@ -1,7 +1,7 @@
 import React from "react";
-import CrewImagePanel from "../../../../Components/CrewImagePanel";
-import CrewInfoPanel from "../../../../Components/CrewInfoPanel";
-import DestinationInfoPanel from "../../../../Components/DestinationInfoPanel";
+import CrewImagePanel from "./CrewImagePanel";
+import CrewInfoPanel from "./CrewInfoPanel";
+import DestinationInfoPanel from "../../destinations/[sect]/DestinationInfoPanel";
 import { GetCategoriesWithData } from "../../../../lib/SharedData";
 
 type Props = {};

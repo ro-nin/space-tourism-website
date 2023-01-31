@@ -1,13 +1,13 @@
 "use client";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { Category, Technology } from "../lib/SharedData";
+import { Category, Technology } from "../../../../lib/SharedData";
 import {
   getCategoryPath,
   getSectionDataFromPathname,
   NavLinksType,
-} from "../lib/utils";
-import NavLinksNumbers from "./Navigation/NavLinksNumbers";
+} from "../../../../lib/utils";
+import NavLinksNumbers from "../../../../Components/Navigation/NavLinksNumbers";
 
 type Props = {
   categoriesWithData: Category[];
