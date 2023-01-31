@@ -6,12 +6,19 @@ export type PageProps = {
   params?: any;
   children?: React.ReactNode;
 };
+
+/**
+ * Main categories (as first level section) of the website
+ */
 export type CategoryMeta = {
   name: string;
   slug: string;
   sectionIndex: string;
 };
 
+/**
+ * Data for sections from external source (ex:json)
+ */
 export interface ExternalData {
   destinations: Destination[];
   crew: Crew[];
@@ -67,6 +74,9 @@ export const getCategoryMeta = cache((): CategoryMeta[] => [
   },
 ]);
 
+/**
+ * Fetch data needed to populate sections from a given json (local)
+ */
 export async function GetCategoriesWithData(): Promise<Category[]> {
   const jsonDirectory = path.join(process.cwd(), "externalData");
   const fileContents = await fs.readFile(jsonDirectory + "/data.json", "utf8");

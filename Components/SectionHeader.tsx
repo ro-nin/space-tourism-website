@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import React from "react";
 import { CategoryMeta } from "../lib/SharedData";
-import { getSectionInfoFromSlug, getCategoryPath } from "../lib/utils";
+import { getCategoryInfoFromSlug, getCategoryPath } from "../lib/utils";
 
 type Props = {
   sections: CategoryMeta[];
@@ -11,7 +11,7 @@ type Props = {
 
 const SectionHeader = (props: Props) => {
   const pathname = getCategoryPath(usePathname());
-  const sectionInfo = getSectionInfoFromSlug(props.sections, pathname!);
+  const sectionInfo = getCategoryInfoFromSlug(props.sections, pathname!);
 
   return (
     <div className="flex gap-4 text-center mx-auto md:mx-0 md:pl-12 md:text-left   lg:pl-28">
