@@ -33,7 +33,7 @@ const Container = ({ sections, children }: Props) => {
       : "";
   return (
     <div
-      className={`${bgStyle} relative flex h-screen w-screen flex-col  bg-cover transition-all`}
+      className={`${bgStyle} relative flex h-screen w-screen flex-col  bg-cover transition-all overflow-y-auto`}
     >
       {children}
     </div>
