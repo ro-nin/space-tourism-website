@@ -43,7 +43,7 @@ Users should be able to:
 ### Links
 
 <!-- - Solution URL: [Source]() -->
-- Live Site URL: [View Site Deploy]()
+- Live Site URL: [View Site Deploy](https://space-tourism-website-sigma-topaz.vercel.app/)
 
 ## My process
 This project was bootstrapped with create-next-app@latest with tailwind, using the Next V13 "app" directory workflow and the React client/server components. Dynamic routes were forced in the project for exercise purpose and the solution ended up being halfway dynamic (since the "category" or first level sections are static) but the date of the categories (ex: the "sections") can be extended by adding content in the JSON, handled by the dynamic routes (ex: /category/\[section]).
