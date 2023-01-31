@@ -1,27 +1,85 @@
-# Next.js + Tailwind CSS Example
+# Frontend Mentor - Space-tourism-website
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
-## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+## Table of contents
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+- [Frontend Mentor - Space-tourism-website](#frontend-mentor---space-tourism-website)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+      - [Assignment Design](#assignment-design)
+      - [Current Solution](#current-solution)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [Continued development](#continued-development)
+    - [Known issues](#known-issues)
+  - [Author](#author)
+- [Execution](#execution)
+  - [Available Scripts](#available-scripts)
+    - [`npm run dev`](#npm-run-dev)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run start`](#npm-run-start)
 
-## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Overview
+### The challenge
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+Users should be able to:
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+### Screenshot
+#### Assignment Design
+![DesignToRecreate](./problem.jpg)
+#### Current Solution
+![MySolution](./solution.png)
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Links
+
+<!-- - Solution URL: [Source]() -->
+- Live Site URL: [View Site Deploy]()
+
+## My process
+This project was bootstrapped with create-next-app@latest with tailwind, using the Next V13 "app" directory workflow and the React client/server components. Dynamic routes were forced in the project for exercise purpose and the solution ended up being halfway dynamic (since the "category" or first level sections are static) but the date of the categories (ex: the "sections") can be extended by adding content in the JSON, handled by the dynamic routes (ex: /category/\[section]).
+
+### Built with
+
+- [Next.js](https://nextjs.org/).
+- [Tailwind](https://tailwindcss.com/)
+
+### Continued development
+
+- Migrate to purely static website (no dynamic routes)
+- Remove Css Classes
+
+### Known issues
+
+- Layout shifts
+## Author
+
+- Website - [Portfolio](https://emkorp.vercel.app)
+
+
+# Execution
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm run build`
+
+build the static site \
+### `npm run start`
+run the site built with `npm run build`
+
