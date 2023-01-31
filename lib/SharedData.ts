@@ -68,11 +68,8 @@ export const getCategoryMeta = cache((): CategoryMeta[] => [
 ]);
 
 export async function GetCategoriesWithData(): Promise<Category[]> {
-  // Assuming it always return expected categories
   const jsonDirectory = path.join(process.cwd(), "externalData");
-  //Read the json data file data.json
   const fileContents = await fs.readFile(jsonDirectory + "/data.json", "utf8");
-  //Return the content of the data file in json format
   const parsed: ExternalData = await JSON.parse(fileContents);
   const sections = [
     {

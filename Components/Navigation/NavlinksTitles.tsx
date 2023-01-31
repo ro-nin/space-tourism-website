@@ -15,7 +15,6 @@ const NavlinksTitles = ({
   withNumber = true,
   small = false,
 }: NavLinksProps) => {
-  console.log(activeIndex);
   return (
     <div className="flex gap-8">
       {links.map((sec, index) => (

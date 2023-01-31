@@ -3,6 +3,7 @@ import { getCategoryMeta } from "../lib/SharedData";
 import Header from "../Components/Header/Header";
 import Container from "../Components/Container";
 import { Bellefair, Barlow_Condensed } from "@next/font/google";
+import Footer from "../Components/Footer";
 
 const bellefairFont = Bellefair({
   variable: "--font-bellefair",
@@ -33,6 +34,7 @@ export default async function RootLayout({
         <Container sections={sections}>
           <Header sections={sections}></Header>
           {children}
+          <Footer></Footer>
         </Container>
       </body>
     </html>

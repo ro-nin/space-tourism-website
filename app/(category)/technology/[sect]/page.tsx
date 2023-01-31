@@ -11,11 +11,11 @@ const Page = async (props: Props) => {
   return (
     <div
       className="relative flex h-full w-full
-        flex-1  flex-col items-center   gap-4 pt-12  md:pt-6 lg:flex-row
+        flex-1  flex-col items-center   gap-4 pt-12 pb-12  md:pt-6 lg:flex-row
          lg:items-end lg:justify-between lg:gap-0 lg:py-8 lg:pl-28 "
     >
       <div
-        className="order-last flex w-[50%] flex-col justify-center  gap-4 text-center 
+        className="order-last flex w-[80%] flex-col justify-center  gap-4 text-center 
       lg:order-first lg:h-full lg:w-[50%]  lg:flex-row  lg:justify-start lg:gap-12    lg:text-left  "
       >
         <TechnologyInfoPanel categoriesWithData={categoriesData} />

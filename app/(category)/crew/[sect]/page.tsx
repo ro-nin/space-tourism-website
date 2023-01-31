@@ -10,8 +10,8 @@ const Page = async (props: Props) => {
   const categoriesData = await GetCategoriesWithData();
   return (
     <div
-      className="relative flex h-full 
-        w-full  flex-1 flex-col items-center  justify-center gap-8  pt-8 
+      className="relative flex h-full  w-full flex-1
+        flex-col  items-center justify-center gap-8  py-12 pt-8  md:pb-0 
         md:pt-6
          lg:flex-row lg:items-end lg:justify-start lg:gap-0 lg:pl-28"
     >
