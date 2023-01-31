@@ -19,9 +19,9 @@ const Header = ({ sections }: Props) => {
   return (
     <header
       className="  z-50 flex  w-full justify-between
-      pl-4  md:relative md:h-28 lg:items-start  "
+      pl-4  md:relative md:h-28 lg:items-center lg:pt-4  "
     >
-      <Logo className="h-20 w-20 pt-8  md:pl-4 "></Logo>
+      <Logo className="h-20 w-20   md:pl-4 pt-8  lg:pt-4 "></Logo>
       <Navbar
         links={urls}
         sideMenuIsOpen={sideMenuIsOpen}
@@ -31,7 +31,7 @@ const Header = ({ sections }: Props) => {
         onClick={() => {
           setSideMenuIsOpen(!sideMenuIsOpen);
         }}
-        className="z-50 ml-auto  h-24 w-24 pt-8 md:hidden md:pt-0"
+        className="z-50 ml-auto  h-20 w-20 pt-7 md:hidden md:pt-0"
       >
         {sideMenuIsOpen ? (
           <IconClose className="  "></IconClose>

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/*TODO: having css class with tailwind code seems MEH, less portable, commit to one or another */
+
 * {
   @apply text-neutral-light;
 }
@@ -52,8 +54,8 @@
 }
 
 .nav-underline {
-  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
-  @apply text-left underline transition-all duration-500 sm:underline-offset-[3.0em];
+  text-decoration: underline 0.1em rgba(0, 0, 0, 0);
+  @apply text-left underline transition-all duration-500 sm:underline-offset-[2.8em];
 }
 
 .nav-underline.nav-underline-small {
